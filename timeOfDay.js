@@ -8,17 +8,21 @@ function getTimeOfDay(time) {
     }
 }
 
-function isMorning(time) {
-    let hour = time.getHours();
+function isMorning(hour) {
     return hour >= 4 && hour < 12;
 }
 
-function isAfternoon(time) {
-    let hour = time.getHours();
+function isAfternoon(hour) {
     return hour >= 12 && hour < 17;
 }
 
-function isEvening(time) {
-    let hour = time.getHours();
+function isEvening(hour) {
     return hour >= 17 || hour < 4;
 }
+
+module.exports = {
+    getTimeOfDay,
+    isMorning,
+    isAfternoon,
+    isEvening
+};
